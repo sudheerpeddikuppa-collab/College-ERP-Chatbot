@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ERP Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="chat-container">
+
+    <div class="top-bar">
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="robot-header">
+
+    <div class="robot-chat">
+
+        <img src="{{ url_for('static', filename='robot.gif') }}" class="robot">
+
+        <div class="speech-box">
+            <span id="robot-text" data-user="{{ user }}"></span>
+        </div>
+
+    </div>
+
+</div>
+
+    <div id="chat-box"></div>
+
+    <div class="input-area">
+        <input type="text" id="user-input" placeholder="Type here...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
